@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Do WHILE</title> 
+<script type="text/javascript">
+    for(var i = 0; i <= 9; i++){
+        var str = "";
+        for(var j = i + 1; j <= 9; j++){
+            str += j;
+        }
+        document.write(i + str + "<br />");
+    }
+
+    var a;
+    var b = 5;
+    var c = "";
+    for(a = 0; a <= b; a++){
+        var d = 0;
+        var space = "";
+        while(d < b - a){
+            space += "&nbsp;&nbsp;";
+            d++;
+        }
+
+        if(a == 0){
+            c = a.toString();
+        }else {
+            c = a + c +a;
+        }
+        document.write(space + c + "<br />");           
+        
+    }
+  
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>

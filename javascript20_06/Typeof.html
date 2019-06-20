@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Toán tử so sánh và toán tử logic</title> 
+<script type="text/javascript">
+
+    var mtNumber = 5;
+    var myString = "String";
+    var myBoolean = true;
+    var myObject = {};
+    var myArray = [];
+    var myUndefined = undefined;
+    var myNull = null;
+
+    function myTypeOf(obj){
+        var type = typeof obj;
+
+        if(type != "object"){
+            return type;
+        }else if (obj instanceof Array){
+            return "array";
+        }else if (obj == null){
+            return "null";
+        }else{
+            return "object";
+        }
+    }
+
+    document.write(mtNumber + " : " + myTypeOf(mtNumber) + "<br />");
+    document.write(myString + " : " + myTypeOf(myString) + "<br />");
+    document.write(myBoolean + " : " + myTypeOf(myBoolean) + "<br />");
+    document.write(myObject + " : " + myTypeOf(myObject) + "<br />");
+    document.write(myArray + " : " + myTypeOf(myArray) + "<br />");
+    document.write(myUndefined + " : " + myTypeOf(myUndefined) + "<br />");
+    document.write(myNull + " : " + myTypeOf(myNull) + "<br />");
+    
+  
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>

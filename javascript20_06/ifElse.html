@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Toán tử so sánh và toán tử logic</title> 
+<script type="text/javascript">
+    var luong = 1000000;
+    var thue;
+    var luongCon;
+    if(luong < 8){
+        luongCon = luong;
+    }else if( 10 < luong >= 8){
+        thue = luong * 0.01;
+        luongCon = luong - thue;
+    }else{
+        thue = luong * 0.02;
+        luongCon = luong -thue;
+    }
+    document.write(luongCon);
+
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>
