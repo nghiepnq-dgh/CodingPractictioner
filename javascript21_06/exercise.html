@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title> 
+<script type="text/javascript">
+    var n = new Number(2984794);
+    var max = 0;
+
+    while(n > 0){
+        var donvi = n % 10;
+        if(donvi > max) max = donvi;
+        n = (n-donvi) / 10;
+    }
+    document.write("Số lớn nhất là: " + max);
+    
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>
