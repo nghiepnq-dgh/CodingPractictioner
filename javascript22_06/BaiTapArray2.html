@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title> 
+<script type="text/javascript">
+    var student = Array(
+        ["Nguyen Van A", [7,8,6]],
+        ["Nguyen Van B", [8,7,6]],
+        ["Nguyen Van C", [7,8,9]]
+    ) 
+    for(x in student){
+        document.write(student[x] + "<br />");
+    }
+    document.write("<hr />")
+
+
+    for(x in student){
+        var score = student[x][1];
+        var temp = 0;
+        for(y in score){
+            temp += score[y]
+        }
+        student[x][1] = Math.floor(temp/score.length);
+        document.write(student[x] + "<br />");
+    }
+    
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>

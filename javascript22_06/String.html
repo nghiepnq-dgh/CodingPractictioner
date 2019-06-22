@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript String</title> 
+<script type="text/javascript">
+    var br = "<br />";
+    var hr = "<hr />";
+    var str = new String("jQuery Master isvery easy");
+    var str1 = "is easy";
+
+    document.write("Constructor: " + str.constructor + br);
+    document.write("Value: " + str + br);
+    document.write("value [5]: " + str[5] + br);
+    document.write("Lenght: " + str.length + br);
+    document.write("chatAt(4): " + str.charAt(4) + br);
+    document.write("chatCodeAt(4): " + str.charCodeAt(4) + br);
+    document.write("String.fromCharCode(123): " + String.fromCharCode(123));
+    document.write(hr);
+    document.write("Concat: " + str.concat(" ", str1) + br);
+    document.write("Input: " + str + br);
+    document.write("indexOf(): " + str.indexOf("Master") + br);
+    document.write("Lưu ý indexOf() có thể nấy giá trị liền nhau: " + str.indexOf("very") + br);
+    document.write("lastIndexOf(): " + str.lastIndexOf("Master") + br);
+
+
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>

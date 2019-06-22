@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript String</title> 
+<script type="text/javascript">
+    var br = "<br />";
+    var hr = "<hr />";
+    var str = new String("jQuery Master isvery easy very");
+    var str1 = "is easy";
+
+    document.write("input: " + str + br);
+    
+    // Search: Tìm kiếm và trả về vị trí xuất hiện đầu tiên của một giá trị nào đó được tìm kiếm trong chỗi.
+    document.write("Search(very): " + str.search("very") + hr);
+
+    // match: Tìm kiếm và trả về giá trị được tìm kiếm trong chỗi.
+    document.write("Match(very): " + str.match("very") + hr);
+
+    // replace: Tìm kiếm và thay thế giá trị old bằng giá trị new => replace(old,new).
+    document.write(" replace(very,easy): " + str.replace("very", "easy") + hr);
+
+    //slice(start, end): Trích xuất chuỗi từ vị trí start đến vị trí end (không lấy giá trị end);
+    document.write("Slice(0): " + str.slice(0) + br);
+    document.write("Slice(3): " + str.slice(3) + br);
+    document.write("Slice(2,8): " + str.slice(2,8) + br);
+    document.write("Lấy giá trị cuối cùng Slice(-1): " + str.slice(-1) + hr);
+
+    //substring(start, end): Trích xuất chuỗi từ vị trí start đến vị trí end (không lấy giá trị end);
+    document.write("substring(0): " + str.substring(0) + br);
+    document.write("substring(3): " + str.substring(3) + br);
+    document.write("substring(2,8): " + str.substring(2,8) + br);
+    document.write("Lấy giá trị cuối cùng substring(-1): " + str.substring(-1) + hr);
+
+    //substr(start, length): Trích xuất chuỗi từ vị trí start đến vị trí start + length (không lấy giá trị start + length);
+    document.write("substr(0): " + str.substr(0) + br);
+    document.write("substr(3): " + str.substr(3) + br);
+    document.write("substr(2,5): " + str.substr(2,5) + br);
+    document.write("substr(-2,5): " + str.substr(-2,5) + br);// -2 -> 4
+    document.write("Lấy giá trị cuối cùng substr(-1): " + str.substring(-1) + br);
+
+
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>

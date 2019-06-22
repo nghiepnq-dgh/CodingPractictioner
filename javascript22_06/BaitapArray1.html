@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title> 
+<script type="text/javascript">
+    var student = {"first_name":"Mary", "last_name":"Johnson", "birthday":1997, "sex": 1};
+    var result = {};
+    result["full_name"] = student["first_name"] + " " + student["last_name"];
+    result["birthday"] = 2019 - student["birthday"];
+    result["sex"] = (student["sex"]) ? "boy" : "girl";
+    for(x in result){
+        document.write(x + ": " + result[x] + "<br />");
+    }
+    
+    
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>
