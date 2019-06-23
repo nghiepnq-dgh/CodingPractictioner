@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript String</title>
+<style type="text/css">
+    #result{
+        margin: 20px auto;
+        height: 300px;
+        width: 700px;
+        border: 1px solid #999;
+        padding: 10px;
+    }
+</style> 
+<script type="text/javascript">
+
+    var br = "<br />";
+    var date = new Date();
+    var result = "<ul>";
+
+    result = "<li>Năm: " + date.getFullYear() + br + "</li>";
+    result += "<li>Năm: " + parseInt(date.getMonth()+1) + br + "</li>";
+    result += "<li>Ngày trong thang: " + date.getDate() + br + "</li>";
+    result += "<li>Ngày trong tuần: " + date.getDay() + br + "</li>";
+    result += "<li>Giờ: " + date.getHours() + br + "</li>";
+    result += "<li>Phút: " + date.getMinutes() + br + "</li>";
+    result += "<li>Giây: " + date.getSeconds() + br + "</li>";
+    result += "<li>Mili Giây: " + date.getMilliseconds() + br + "</li>";
+    result += "<li>getTime: " + date.getTime() + br + "</li>";
+    result += "<li>getTimezoneOffset: " + date.getTimezoneOffset() + br + "</li>";
+    result += "</ul>"
+
+    function showResult(){
+        document.getElementById("result").innerHTML = result;
+    }
+
+</script>
+</head>
+
+<body>
+    <input type="button" onClick="showResult();" value="show Result" />
+    <div id="result"></div>
+    
+</body>
+</html>

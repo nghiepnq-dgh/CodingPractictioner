@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript String</title> 
+<script type="text/javascript">
+    var br = "<br />";
+    //var fullName = "Phạm VănDuyệt";
+    // var lastName = fullName.indexOf(" ");
+    // firstName = fullName.lastIndexOf(" ");
+
+    //document.write("Họ: " + fullName.slice(0, lastName) + br);
+    //document.write("Tên Đệm: " + fullName.slice(lastName, firstName) + br);
+    //document.write("Tên: " + fullName.slice(firstName) + br);
+
+    String.prototype.button = function(){
+        lastName = this.indexOf(" ");
+        firstName = this.lastIndexOf(" ");
+        var result;
+
+        if(lastName > 0 && firstName > 0){
+            result  = "Họ: " + this.slice(0, lastName) + br;
+            result += "Tên đệm: " + this.slice(lastName, firstName) + br;
+            result += "Tên: " + this.slice(firstName) + br;
+        }else{
+            result = "Dữ liệu không hợp lệ";
+        }
+        return result;
+    }
+
+
+function button(){
+    var fullName = new String();
+    fullName = document.getElementById("full-name").value;
+    document.getElementById("result").innerHTML = fullName.button();
+}
+
+
+</script>
+</head>
+
+<body>
+    <input type="text" name="fullName" id="full-name" />
+    <input type="button" value="button" onclick="button();" />
+    <div id="result"></div>
+</body>
+</html>
