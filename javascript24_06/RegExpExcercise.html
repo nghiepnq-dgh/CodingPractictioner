@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript String</title>
+   
+<script type="text/javascript">
+
+    var br = "<br />";
+    var hr = "<hr />";
+    var str = "    Javascript    Is Easy    ";
+
+    document.write("Input: " + str + "length: " + str.length + hr );
+
+    function leftTrim(string){
+        string = string.replace(/^\s+/img,"");
+        return string;
+    }
+
+    function rightTrim(string){
+        string = string.replace(/\s+$/img,"");
+        return string;
+    }
+
+    function trim(string){
+        string = string.replace(/\s+/img," ");
+        return string;
+    }
+
+    str = leftTrim(str);
+    document.write("Output left: " + str + "   Length: " + str.length + hr);
+    
+    str = rightTrim(str);
+    document.write("Output right: " + str + "   Length: " + str.length + hr);
+
+    str = trim(str);
+    document.write("Output trim: " + str + "   Length: " + str.length + br);
+    
+
+
+</script>
+</head>
+
+<body>
+    
+    
+</body>
+</html>

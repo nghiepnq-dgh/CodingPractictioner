@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript String</title>
+   
+<script type="text/javascript">
+
+    var br = "<br />";
+    var str = "Javascript Is Easy Javascript Is easy Easy";
+    //var patt = new RegExp("javascript");
+    var patt = /Javascript/g;
+    var patt1 = /is/i;
+    var patt3 = /easy/igm;
+    
+
+    document.write(str + "<hr />");
+    document.write(" var patt3 = /easy/im" + "<hr />");
+
+    if(patt3.test(str) == true){
+        document.write("'easy' được tìm thấy: " +patt3.lastIndex + br);
+    }
+    
+
+</script>
+</head>
+
+<body>
+    
+    
+</body>
+</html>
