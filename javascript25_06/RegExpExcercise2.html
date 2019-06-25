@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript String</title> 
+<style type="text/css">
+    .result{
+        margin: 20px auto;
+        height: 300px;
+        width: 700px;
+        border: 1px solid #999;
+        padding: 10px;
+    }
+</style>
+<script type="text/javascript">    
+    var br = "<br />";
+
+    String.prototype.button = function(){
+        lastName = this.indexOf(" ");
+        firstName = this.lastIndexOf(" ");
+        var result = [];
+
+        if(lastName > 0 && firstName > 0){
+            result[0] = "Họ: " + this.slice(0, lastName) + br;
+            result[1] = "Tên đệm: " + this.slice(lastName, firstName) + br;
+            result[2] = "Tên: " + this.slice(firstName) + br;
+        }
+        return result;
+    }
+
+    //Loại bỏ các giá trị khoản trắng thừa trong một chuỗi.
+    function trim(string){
+        string = string.replace(/^\s+/img + "");
+        string = string.replace(/\s+$/img + "");
+        string = string.replace(/\s+/img + " ");
+        return string;
+    }
+
+
+function button(){
+    var xhtml;
+    var fullName = new String();
+    fullName = document.getElementById("full-name").value;
+    fullName = trim(fullName);
+
+    var result =fullName.button();
+    if(result.length > 0){
+        xhtml = "Họ: " + result[0];
+        if(result[1]!="") xhtml += "Tên đệm: " + result[2];
+        xhtml += "Tên: " + result[2];
+    }else{
+        xhtml = "Dữ liệu không hợp lệ"
+    }
+    document.getElementById("result").innerHTML = fullName.button();
+}
+
+
+</script>
+</head>
+
+<body>
+    <div class="result">
+        <input type="text" name="fullName" id="full-name" />
+        <input type="button" value="button" onclick="button();" />
+        <div id="result"></div>
+    </div>
+    
+</body>
+</html>
