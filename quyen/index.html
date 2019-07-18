@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>SINCE 1999 STORE</title>
+		<link rel="shortcut icon" href="images/icon/favicon.ico">
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+	</head>
+	<body onLoad="showMenu();showProduct();">
+		<div id="nav">
+			<div class="container">
+				<div class="topnav">
+					<ul class="left">
+						<li><a href="https://www.facebook.com/"><img src="images/icon/facebookicon.svg"></a></li>
+						<li><a href="https://www.instagram.com/"><img src="images/icon/instagramicon.svg"></a></li>
+						<li><a href="https://www.youtube.com/"><img src="images/icon/youtubeicon.svg"></a></li>
+					</ul>
+					<ul class="right">
+                        <li id="tk"  style="display: flex">
+                            <button id="dangnhap" style="margin: 5px" >Đăng Nhập</button>
+                            <button  id="dangky" style="margin: 5px" >Đăng Ký</button>
+                        </li>
+						<!-- <li id="acc" style="position: fixed;"><button onClick="showform()" class="button"><img src="images/icon/usericon.svg"></button></li> -->
+						<li><button onClick="location.href='file/cart.html'" class="button"><img src="images/icon/carticon.svg"></button></li>
+						<li><button onClick="showSearch()" class="button"><img src="images/icon/searchicon.svg"></button></li>
+					</ul>
+				</div>
+				<div class="botnav">
+					<div class="logo"><a href="index.html"><img src="images/icon/logo.jpg" alt="Since1999"></a></div>
+					<div><button id="btnmenu" onclick="showMenuMobile()">&#9776;</button></div>
+					<ul id="navmenu">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1>Đăng Nhập</h1>
+                    <div style="width: 300px; margin: auto;">
+                        <label style="width: 300px; height: 40px;">Tên đăng nhập:</label>
+                        <input style="width: 300px; height: 40px; border: 1px solid rgb(37, 37, 37);" type="text" name="name" id="dnName" value="">
+                        <label style="width: 300px; height: 40px; ">Mật khẩu:</label>
+                        <input style="width: 300px; height: 40px; border: 1px solid rgb(37, 37, 37);" type="text" name="password" id="dnPassword" value="">
+                        <button onclick="dangnhap(); return false;"
+                            style="width: 300px; border-radius: 10px; margin: 10px 0px; height: 40px;">Login
+                        </button>
+                    </div>
+                    <div style="text-align: center;">
+                        <p>Bạn chứa có tài khoản? <a style="font-size: 20px; color: #ff4700;" href="#">Đăng ký</a></p>
+    
+                    </div>
+                </div>
+            </div>
+            <div id="myModal1" class="modal1">
+                <div class="modal-content1">
+                    <span class="close1">&times;</span>
+                    <h2 style="text-align: center">Đăng Ký</h2>
+                    <div style="width: 410px; margin: 50px auto">
+                        <label class="label">Tên Đăng Nhập:</label>
+                        <input type="text" name="name" id="name" value=""><br>
+                        <label class="label1">&nbsp</label>
+                        <div id="errorname" class="error"></div>
+                        <br>
+                        <label class="label">Email:</label>
+                        <input type="email" name="email" id="email" value=""><br>
+                        <label class="label1">&nbsp</label>
+                        <div id="erroremail" class="error"></div>
+                        <br>
+                        <label class="label">Mật khẩu:</label>
+                        <input type="text" name="pass" id="pass" value=""><br>
+                        <label class="label1">&nbsp</label>
+                        <div id="errorpass" class="error"></div>
+                        <br>
+                        <label class="label">Nhập Lại Mật Khẩu:</label>
+                        <input type="password" name="password" id="password" value=""><br>
+                        <label class="label1">&nbsp</label>
+                        <div id="errorpassword" class="error"></div>
+                        <br>
+                        <label class="label">&nbsp</label>
+                        <button onclick="dangky(); return false;" style="width: 250px; height: 40px;">Đăng Ký</button>
+                    </div>    
+                </div>
+            </div>
+        </body>
+		</div>
+		<!--Searchsection  begin -->
+		<div id="searchsection">
+			<div class="container">
+				<div class="close" onClick="closeSearch()">+</div>
+				<div class="searchbox">
+					<input type="text" placeholder="Tìm kiếm" id="search" onKeyUp="search()"><button onclick="showextend()"><img src="images/icon/arrow.svg"></button>
+				</div>
+				<div id="searchextend" class="">
+					<div>
+						<select id="brandsearch" onchange="search()">
+							<option value="all" selected>TẤT CẢ</option>
+							<option value="adidas">ADIDAS</option>
+							<option value="nike">NIKE</option>
+							<option value="gucci">GUCCI</option>
+							<option value="balenciaga">BALENCIAGA</option>
+						</select>
+					</div>
+					<div> <input type="text" id="priceform" onchange="search()" placeholder="Giá từ"> &mdash; <input type="text" id="priceto" onchange="search()" placeholder="Đến"></div>
+				</div>
+				<div id="searchresult"></div>
+			</div>
+		</div>
+		<!--Searchsection  end -->
+		<!--Banner (Nhi) begin -->
+		<div class="bannerSection">
+			<div>
+				<img class="slideShow" src="images/banner/blackfriday.jpg" style="width: 100%">
+				<img class="slideShow" src="images/banner/banner_adidas.jpg" style="width: 100%">
+				<img class="slideShow" src="images/banner/banner_nike.jpg" style="width: 100%">
+				<img class="slideShow" src="images/banner/banner_gucci.jpg" style="width: 100%">
+				<img class="slideShow" src="images/banner/banner_balenciaga.jpg" style="width: 100%">
+			</div>
+		</div>
+		<!--Banner (Nhi) end -->
+		<div id="main">
+			<div class="container" id="maincontent">
+				<div id="product">
+					<!-- Product -->
+				</div>
+				<div id="productInfo" class="modal">
+					<div id="info">
+						<button type="button" class="close" onClick="closeProductInfo()">+</button>
+						<div class="left">
+							<img id="imgbig" src="">
+						</div>
+						<div class="right">
+							<h2 id="productname"></h2>
+							<h4 id="productprice"></h4>
+							<!-- <h4>SIZE</h4>
+							<select id="size">
+								<option value="36" selected>36</option>
+								<option value="37">37</option>
+								<option value="38">38</option>
+								<option value="39">39</option>
+								<option value="40">40</option>
+								<option value="41">41</option>
+								<option value="42">42</option>
+								<option value="43">43</option>
+								<option value="44">44</option>
+							</select> -->
+							<h4>Số lượng</h4>
+							<button class="quantitydown" onClick="quantitydown()">-</button><input type="text" id="quantity" value="1"><button class="quantityup" onClick="quantityup()">+</button>
+							<button class="addtocart" onclick="addToCart()">Thêm vào giỏ</button>
+						</div>
+					</div>
+				</div>
+				<div id="page"></div>
+			</div>
+		</div>
+		<div id="mail">
+			<h2>Nhận thông tin khuyến mãi mới nhất</h2>
+			<p>Để lại email của bạn để nhận những thông tin khuyến mãi mới nhất từ chúng tôi</p>
+			<input type="email" id="customermail" placeholder="Email">
+			<button type="button">&#62;</button>
+		</div>
+		<div id="foot">
+			<div class="container">
+				<div class="topfoot">
+					<div class="footmenu">
+						<img src="images/icon/logo.jpg" alt="Since1999">
+					</div>
+					<div class="footmenu">
+						<h4>Thông tin hữu ích</h4>
+						<a href="file/contact.html">Kiểm tra size giày</a><br>
+						<a href="file/contact1.html">Hướng dẫn bảo hành</a><br>
+						<a href="file/contact2.html">Quy định đổi giày</a>
+					</div>
+					<div class="footmenu">
+						<h4>Giới thiệu</h4>
+						<a href="file/contact3.html">Quan niệm về giày</a><br>
+						<a href="file/contact4.html">Danh sách cửa hàng</a><br>
+						<a href="file/contact4.html">Dành cho đại lý</a>
+					</div>
+					<div class="footmenu">
+						<h4>Thông tin liên hệ</h4>
+						<p>Địa chỉ: 273 An Dương Vương, P3, Quận 5, TPHCM</p>
+						<p>Số điện thoại: 0566490523 </p>
+					</div>
+				</div>
+				<div class="botfoot">
+					<p>2018 &#169; Copyright Since1999. All Rights Reserved.</p>
+				</div>
+			</div>
+		</div>
+		<div id="customalert"></div>
+        <script src="js/javascript.js"></script>
+        
+</html>
