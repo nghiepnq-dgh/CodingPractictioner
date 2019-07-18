@@ -32,9 +32,9 @@ function dangnhap(){
     let dnName = document.getElementById('dnName').value;
     let dnPassword = document.getElementById('dnPassword').value;
     if(dnName == account.name && dnPassword == account.pass){
-        document.getElementById("tk").style.display = "none";
+        alert("Đăng nhập thành công.")
         document.getElementById("myModal").style.display = "none";
-        document.getElementById("acc").style.display = "block"
+        
     }else{
         alert("Tài Khoản sai!")
     }
@@ -119,7 +119,8 @@ function dangky(){
             name: name,
             pass: pass,
             email: email,
-        });
+		});
+		document.getElementById("myModal1").style.display = "none";
     }
     Account.save();
     //renderAccount();
