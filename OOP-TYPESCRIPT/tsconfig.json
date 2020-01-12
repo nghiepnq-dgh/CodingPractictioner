@@ -1,0 +1,17 @@
+/*
+  File cau hinh ts
+  compile file ts at folder ts to js =>> folder compileTs
+*/
+{
+    "compilerOptions": {
+        "outDir": "compileTs",
+        "target": "ES6",
+        //xem co thay doi thi reload
+        "watch": true,
+        "removeComments": true 
+    },
+    // chua nhung folder khong can bien dich
+    "exclude": [
+      "css"
+    ]
+}
